@@ -21,6 +21,9 @@ export default{
 </script>
 <template>
     <header>
+        <div>
+            <img src="../../img/dc-logo.png">
+        </div>
         <nav>
             <ul>
                 <li v-for="link in navLinks" :keys="link.text">
@@ -30,10 +33,28 @@ export default{
         </nav>
     </header>
 </template>
+
 <style scoped>
 
 header{
     background-color: white;
-    padding:10px 0
+    padding:10px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul{
+    height: 10vh;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+    margin: 1rem;
 }
 </style>
