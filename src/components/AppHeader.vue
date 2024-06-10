@@ -22,7 +22,7 @@ export default{
 <template>
     <header>
         <div>
-            <img src="../../img/dc-logo.png">
+            <img src="../assets/img/dc-logo.png">
         </div>
         <nav>
             <ul>
@@ -38,8 +38,6 @@ export default{
 
 header{
     background-color: white;
-    padding:10px 0;
-    border-bottom: 1px solid #ddd;
     display: flex;
     justify-content: space-around;
 }
