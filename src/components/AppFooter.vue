@@ -3,11 +3,11 @@
 
     <div class="footer-linksContainer">
         <div class="footerLinksList">
-            <div class="footer-links" v-for="(group, index) in footerLinks" :key="index">
+            <div class="footer-links" v-for="group in footerLinks" :key="group.title">
                 <h4>{{ group.title }}</h4>
                 <ul>
-                    <li v-for="link in group.links" :key="link.text">
-                        <a :href="link.url">{{ link.text }}</a>
+                    <li v-for="link in group.links" :key="link">
+                        <p>{{ link }}</p>
                     </li>
                 </ul> 
         </div>
@@ -42,49 +42,20 @@ export default{
         return{
             footerLinks: [
                 {
-                    title: 'DC Comics',
-                    links: [
-                        { text: 'Characters'},
-                        { text: 'Comics'},
-                        { text: 'Movies'},
-                        { text: 'TV'},
-                        { text: 'Games'},
-                        { text: 'Videos'},
-                        { text: 'News'},
-                    ]
+                    title: "DC COMICS",
+                    links: ["Characters", "Comics", "Movies", "TV", "Games", "Videos", "News"],
                 },
                 {
-                    title: 'SHOP',
-                    links: [
-                        { text: 'Shop DC'},
-                        { text: 'Shop DC Collectibles'},
-                    ]
+                    title: "SHOP",
+                    links: ["Shop DC", "Shop DC Collectibles"],
                 },
                 {
-                    title: 'DC',
-                    links: [
-                        { text: 'Terms Of Use'},
-                        { text: 'Privacy policy (New)'},
-                        { text: 'Ad Choices'},
-                        { text: 'Advertising'},
-                        { text: 'Jobs'},
-                        { text: 'Subscriptions'},
-                        { text: 'Talent Workshops'},
-                        { text: 'CPSC Certificates'},
-                        { text: 'Ratings'},
-                        { text: 'Shop Help'},
-                        { text: 'Contact Us'},
-                    ]
+                    title: "DC",
+                    links: ["Terms Of Use", "Privacy policy (New)", "Ad Choices", "Advertising", "Jobs", "Subscriptions", "Talent Workshops", "CPSC Certificates", "Ratings", "Shop Help", "Contact Us"],
                 },
                 {
-                    title: 'Sites',
-                    links: [
-                        { text: 'DC'},
-                        { text: 'MAD Magazine'},
-                        { text: 'DC Kids'},
-                        { text: 'DC Universe'},
-                        { text: 'DC Power Visa'},
-                    ],
+                    title: "SITES",
+                    links: ["DC", "MAD Magazine", "DC Kids", "DC Universe", "DC Power Visa"],
                 }
             ]
         }
