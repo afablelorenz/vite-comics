@@ -4,11 +4,11 @@ export default{
     data(){
         return{
             blueSectionItems: [
-                {name: 'Digital Comics', icon: "../assets/img/buy-comics-digital-comics.png"},
-                {name: 'DC Merchandise', icon: '../assets/img/buy-comics-merchandise.png'},
-                {name: 'Subscribe', icon: '../assets/img/buy-comics-shop-locator.png'},
-                {name: 'Comic Shop Locator', icon: '../assets/img/buy-comics-subscriptions.png'},
-                {name: 'DC Power Visa', icon: '../assets/img/buy-comics-buy-dc-power-visa.png'},
+                {id:1,name: 'Digital Comics', img: "./assets/img/buy-comics-digital-comics.png"},
+                {id:2,name: 'DC Merchandise', img: './assets/img/buy-comics-merchandise.png'},
+                {id:3,name: 'Subscribe', img: './assets/img/buy-comics-shop-locator.png'},
+                {id:4,name: 'Comic Shop Locator', img: './assets/img/buy-comics-subscriptions.png'},
+                {id:5,name: 'DC Power Visa', img: './assets/img/buy-comics-buy-dc-power-visa.png'},
             ]
         }
     },
@@ -21,11 +21,11 @@ export default{
         <p>-->Content goes here <--</p>
     </div>
     <section class="blue-section">
-            <!-- <div class="blue-section-item" v-for="item in blueSectionItems" :key="item.name">
-            <img :src="item.icon" :alt="item.name">
+            <div class="blue-section-item" v-for="(item,i) in blueSectionItems" :key="item.img">
+            <img :src="item.img" :alt="item.name">
             <p>{{ item.name }}</p>
-            </div>-->
-            <ul>
+            </div>
+            <!---<ul>
                 <li>
                     <img src="../assets/img/buy-comics-digital-comics.png">
                     <p>DIGITAL COMICS</p>
@@ -46,7 +46,7 @@ export default{
                     <img src="../assets/img/buy-comics-buy-dc-power-visa.png">
                     <p>DC Power Visa</p>
                 </li>
-            </ul>
+            </ul>-->
     </section>
 </main>
 </template>
