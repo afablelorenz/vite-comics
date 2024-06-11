@@ -1,5 +1,5 @@
 <script>
-
+import ListCard from './ListCard.vue'
 export default{
     data(){
         return{
@@ -16,6 +16,9 @@ export default{
         getImagePath: function(imagePath){
             return new URL(imagePath,import.meta.url).href;
         }
+    },
+    components:{
+        ListCard
     }
 };
 
@@ -23,7 +26,7 @@ export default{
 <template>
 <main>
     <div class="content-placeholder">
-        <p>-->Content goes here <--</p>
+        <ListCard />
     </div>
     <section class="blue-section">
             <div class="blue-section-item" v-for="(item,i) in blueSectionItems" :key="item.img">
