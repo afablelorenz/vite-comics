@@ -4,14 +4,19 @@ export default{
     data(){
         return{
             blueSectionItems: [
-                {id:1,name: 'Digital Comics', img: "./assets/img/buy-comics-digital-comics.png"},
-                {id:2,name: 'DC Merchandise', img: './assets/img/buy-comics-merchandise.png'},
-                {id:3,name: 'Subscribe', img: './assets/img/buy-comics-shop-locator.png'},
-                {id:4,name: 'Comic Shop Locator', img: './assets/img/buy-comics-subscriptions.png'},
-                {id:5,name: 'DC Power Visa', img: './assets/img/buy-comics-buy-dc-power-visa.png'},
+                {id:1,name: 'Digital Comics', img: "../assets/img/buy-comics-digital-comics.png"},
+                {id:2,name: 'DC Merchandise', img: '../assets/img/buy-comics-merchandise.png'},
+                {id:3,name: 'Subscribe', img: '../assets/img/buy-comics-subscriptions.png'},
+                {id:4,name: 'Comic Shop Locator', img: '../assets/img/buy-comics-shop-locator.png'},
+                {id:5,name: 'DC Power Visa', img: '../assets/img/buy-dc-power-visa.svg'},
             ]
         }
     },
+    methods:{
+        getImagePath: function(imagePath){
+            return new URL(imagePath,import.meta.url).href;
+        }
+    }
 };
 
 </script>
@@ -22,31 +27,9 @@ export default{
     </div>
     <section class="blue-section">
             <div class="blue-section-item" v-for="(item,i) in blueSectionItems" :key="item.img">
-            <img :src="item.img" :alt="item.name">
+            <img :src="getImagePath(item.img)" :alt="item.name">
             <p>{{ item.name }}</p>
             </div>
-            <!---<ul>
-                <li>
-                    <img src="../assets/img/buy-comics-digital-comics.png">
-                    <p>DIGITAL COMICS</p>
-                </li>
-                <li>
-                    <img src="../assets/img/buy-comics-merchandise.png">
-                    <p>DC Merchandise</p>
-                </li>
-                <li>
-                    <img src="../assets/img/buy-comics-shop-locator.png">
-                    <p>Subscribe</p>
-                </li>
-                <li>
-                    <img src="../assets/img/buy-comics-subscriptions.png">
-                    <p>Comic Shop Locator</p>
-                </li>
-                <li>
-                    <img src="../assets/img/buy-comics-buy-dc-power-visa.png">
-                    <p>DC Power Visa</p>
-                </li>
-            </ul>-->
     </section>
 </main>
 </template>

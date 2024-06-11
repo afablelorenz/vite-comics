@@ -18,18 +18,14 @@
         </div>
     </div>
 
-
-
     <div class="footer2">
         <button>SIGN UP NOW</button>
         <div class="footerSocials">
             <p>FOLLOW US</p>
             <div class="footerSocialsImg">
-                <p>facebook</p>
-                <p>twitter</p>
-                <p>youtube</p>
-                <p>pinterest</p>
-                <p>maps</p>
+                <div v-for="social in socialLinks" :key="social.name">
+                <img :src="getImagePath(social.icon)" :alt="social.name">
+            </div>
             </div>
         </div>
     </div>
@@ -57,9 +53,21 @@ export default{
                     title: "SITES",
                     links: ["DC", "MAD Magazine", "DC Kids", "DC Universe", "DC Power Visa"],
                 }
+            ],
+            socialLinks: [
+                {name: 'Facebook', icon:'../assets/img/footer-facebook.png'},
+                {name: 'Facebook', icon:'../assets/img/footer-periscope.png'},
+                {name: 'Facebook', icon:'../assets/img/footer-pinterest.png'},
+                {name: 'Facebook', icon:'../assets/img/footer-twitter.png'},
+                {name: 'Facebook', icon:'../assets/img/footer-youtube.png'},
             ]
-        }
+        };
     },
+    methods:{
+        getImagePath: function(imagePath){
+            return new URL(imagePath,import.meta.url).href;
+        }
+    }
 };
 
 
