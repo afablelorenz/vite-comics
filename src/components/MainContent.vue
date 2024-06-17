@@ -26,12 +26,14 @@ export default{
 <template>
 <main>
     <div class="content-placeholder">
-        <ListCard />
+        <ListCard :cardsList="cardsList" />
     </div>
     <section class="blue-section">
             <div class="blue-section-item" v-for="(item,i) in blueSectionItems" :key="item.img">
-            <img :src="getImagePath(item.img)" :alt="item.name">
-            <p>{{ item.name }}</p>
+                <img :src="getImagePath(item.img)" :alt="item.name">
+                <p>
+                    {{ item.name }}
+                </p>
             </div>
     </section>
 </main>
@@ -40,7 +42,7 @@ export default{
 <style scoped>
 .content-placeholder {
     width: 100%;
-    background-color: #000;
+    background-color: red;
     color: #fff;
     padding: 2rem 0;
     height: 15vh;

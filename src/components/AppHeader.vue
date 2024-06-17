@@ -31,6 +31,10 @@ export default{
                 </li>
             </ul>
         </nav>
+        <div class="jumbotron">
+            <img src="../assets/img/jumbotron.jpg">
+        </div>
+        
     </header>
 </template>
 
@@ -39,7 +43,16 @@ export default{
 header{
     background-color: white;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+}
+
+header div.jumbotron{
+    width: 100%;
+}
+
+div.jumbotron img{
+    height: 50vh;
+    width: 100%;
 }
 
 nav ul{

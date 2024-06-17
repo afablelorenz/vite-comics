@@ -24,8 +24,8 @@
             <p>FOLLOW US</p>
             <div class="footerSocialsImg">
                 <div v-for="social in socialLinks" :key="social.name">
-                <img :src="getImagePath(social.icon)" :alt="social.name">
-            </div>
+                    <img :src="getImagePath(social.icon)" :alt="social.name">
+                </div>
             </div>
         </div>
     </div>
